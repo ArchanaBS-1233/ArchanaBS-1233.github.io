@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Welcome to my Portfolio</title>
+    <title>Archana B S Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Importing Google Fonts */
@@ -24,25 +24,25 @@
         }
 
         h1 {
-            color: #343a40;
+            color: #2c3e50;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-size: 3em;
             font-weight: 600;
         }
 
         h2 {
-            color: #007bff;
+            color: #3498db;
             font-size: 2.2em;
             font-weight: 500;
+            margin-bottom: 10px;
         }
 
         h3 {
-            color: #343a40;
-            font-size: 1.8em;
+            color: #2c3e50;
+            font-size: 2em;
             font-weight: 600;
-            text-align: left;
-            margin-top: 40px;
+            margin: 40px 0 20px;
         }
 
         p {
@@ -59,25 +59,27 @@
         nav ol {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
 
         nav ol li {
             display: inline-block;
-            margin: 0 20px;
+            margin: 0 15px;
         }
 
         nav ol li a {
             text-decoration: none;
-            color: #007bff;
+            color: #3498db;
             font-weight: 500;
             padding: 10px 20px;
             font-size: 1.1em;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            border: 1px solid #3498db;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         nav ol li a:hover {
-            background-color: #007bff;
+            background-color: #3498db;
             color: white;
         }
 
@@ -87,30 +89,31 @@
             padding: 40px;
             background-color: #ffffff;
             margin-bottom: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* Cards Section */
         .card {
             background-color: white;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
+            padding: 25px;
+            border: none;
+            border-radius: 15px;
             margin-bottom: 30px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            transform: scale(1.03);
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
 
         .card-title {
             font-size: 1.7em;
             font-weight: 500;
-            color: #17a2b8;
-            margin-bottom: 15px;
+            color: #16a085;
+            margin-bottom: 10px;
         }
 
         ul {
@@ -125,7 +128,7 @@
         }
 
         strong {
-            color: #343a40;
+            color: #2c3e50;
             font-weight: 500;
         }
 
@@ -135,11 +138,11 @@
             }
 
             h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
 
             h2 {
-                font-size: 1.5em;
+                font-size: 1.8em;
             }
 
             nav ol li {
@@ -148,25 +151,25 @@
             }
 
             .card {
-                padding: 15px;
+                padding: 20px;
             }
         }
     </style>
 </head>
 
 <body>
-    <h1>Welcome to my Portfolio</h1>
+    <h1>Archana B S Portfolio</h1>
 
     <!-- Introduction Section -->
     <section class="intro-section">
         <h2>Hello, I'm Archana B S</h2>
-        <p>Welcome to my personal blog where I share my projects, experiences, and thoughts on technology.</p>
+        <p>Welcome to my portfolio! Here, you can explore my projects, experiences, and learn more about me.</p>
     </section>
 
     <!-- Navigation -->
     <nav>
         <ol>
-            <li><a href="about.html">About me</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
@@ -175,39 +178,39 @@
 
     <!-- Experience Section -->
     <section id="experience">
-        <h3>My Experience</h3>
+        <h3>Experience</h3>
 
         <div class="card">
             <div class="card-title">Engineer Intern</div>
-            <p><strong>Company Name:</strong> SupplySafe (RNAlter)</p>
+            <p><strong>Company:</strong> SupplySafe (RNAlter)</p>
             <p><strong>Duration:</strong> Sep 2024 - Present</p>
-            <p>Involved in building new vulnerabilities for Linux kernel modules.</p>
+            <p>Developing and testing Linux kernel module vulnerabilities.</p>
         </div>
 
         <div class="card">
             <div class="card-title">Software Developer Intern</div>
-            <p><strong>Company Name:</strong> TechCiti</p>
+            <p><strong>Company:</strong> TechCiti</p>
             <p><strong>Duration:</strong> Oct 2023 - Nov 2023</p>
-            <p>I contributed to the <strong>Heart Disease Prediction</strong> project, achieving 97.9% prediction accuracy by performing tasks such as:</p>
+            <p>I developed a <strong>Heart Disease Prediction</strong> system with a 97.9% accuracy rate. My contributions included:</p>
             <ul>
-                <li>Collaborating on algorithms and ensuring accurate integration.</li>
-                <li>Writing clean, efficient Python code using Pandas, NumPy, and Scikit-learn.</li>
-                <li>Testing and debugging for optimal performance and reliability.</li>
-                <li>Contributing to the user interface for enhanced user experience.</li>
+                <li>Algorithm integration and code optimization in Python.</li>
+                <li>Utilizing libraries like Pandas, NumPy, and Scikit-learn.</li>
+                <li>Debugging and testing to ensure system reliability.</li>
+                <li>Enhancing the user interface for better usability.</li>
             </ul>
         </div>
 
         <div class="card">
             <div class="card-title">Engineer Intern</div>
-            <p><strong>Company Name:</strong> ComedKares</p>
+            <p><strong>Company:</strong> ComedKares</p>
             <p><strong>Duration:</strong> Oct 2022 - Nov 2022</p>
-            <p>Involved in building a rapid prototype for automatic sensing taps.</p>
+            <p>Worked on prototyping automatic sensing taps using advanced sensors.</p>
         </div>
     </section>
 
     <!-- Education Section -->
     <section id="education">
-        <h3>My Education</h3>
+        <h3>Education</h3>
 
         <div class="card">
             <div class="card-title">Bachelor of Engineering</div>
@@ -226,4 +229,5 @@
 </body>
 
 </html>
+
 
