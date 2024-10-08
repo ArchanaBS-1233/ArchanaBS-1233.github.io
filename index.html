@@ -5,7 +5,7 @@
     <title>Archana B S Portfolio</title>
     <style>
         /* Importing Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
         * {
             box-sizing: border-box;
@@ -14,138 +14,153 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f7f9fc;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
             color: #2c3e50;
-            display: flex;
         }
 
-        /* Sidebar Navigation */
+        /* Navigation Bar */
         nav {
-            width: 220px;
-            background-color: #34495e;
-            padding: 20px;
-            height: 100vh;
-            position: fixed;
+            background-color: #2980b9;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
             top: 0;
-            left: 0;
+            z-index: 1000;
         }
 
         nav ul {
             list-style-type: none;
-            padding: 0;
-            margin-top: 50px;
+            display: flex;
         }
 
         nav ul li {
-            margin-bottom: 20px;
+            margin-left: 30px;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #ecf0f1;
-            font-size: 1.2em;
+            color: white;
             font-weight: 500;
-            padding: 10px;
-            display: block;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
+            background-color: #1e6f99;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
             background-color: #2980b9;
-        }
-
-        /* Main Content Area */
-        .content {
-            margin-left: 240px;
-            padding: 40px;
-            width: calc(100% - 240px);
-        }
-
-        header {
+            color: white;
+            padding: 80px 0;
             text-align: center;
-            margin-bottom: 40px;
         }
 
-        header h1 {
-            font-size: 3em;
+        .hero h1 {
+            font-size: 3.5em;
             font-weight: 700;
-            color: #2c3e50;
+            margin-bottom: 10px;
         }
 
-        header p {
-            font-size: 1.3em;
-            color: #7f8c8d;
-        }
-
-        /* Section Layout */
-        section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            font-size: 2em;
-            font-weight: 600;
-            color: #2980b9;
-            margin-bottom: 20px;
-        }
-
-        /* Card Design */
-        .card {
-            background-color: #ffffff;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        .hero p {
+            font-size: 1.5em;
+            font-weight: 400;
             margin-bottom: 30px;
         }
 
-        .card h3 {
-            font-size: 1.5em;
+        .hero a {
+            background-color: white;
+            color: #2980b9;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 50px;
             font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero a:hover {
+            background-color: #dfe6e9;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 60px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2980b9;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Grid Layout for Experience and Education */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.6em;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 20px;
         }
 
         .card p {
             font-size: 1.1em;
-            color: #34495e;
-            line-height: 1.7;
+            color: #7f8c8d;
+            margin-bottom: 20px;
         }
 
-        .card ul {
-            list-style-type: square;
-            margin-left: 20px;
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
         }
 
-        .card ul li {
-            margin-bottom: 10px;
+        footer p {
+            font-size: 1.1em;
         }
 
-        /* Experience & Education Cards */
-        .card-experience,
-        .card-education {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        /* Mobile Responsiveness */
+        /* Responsive */
         @media (max-width: 768px) {
-            nav {
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-
-            .content {
+            nav ul {
+                flex-direction: column;
                 margin-left: 0;
-                padding: 20px;
             }
 
-            .card-experience,
-            .card-education {
-                grid-template-columns: 1fr;
+            .hero h1 {
+                font-size: 2.8em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
             }
         }
     </style>
@@ -153,8 +168,11 @@
 
 <body>
 
-    <!-- Sidebar Navigation -->
+    <!-- Navigation Bar -->
     <nav>
+        <div class="logo">
+            <h1 style="color: white;">Archana B S</h1>
+        </div>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -163,89 +181,78 @@
         </ul>
     </nav>
 
-    <!-- Main Content -->
-    <div class="content">
-        <header>
-            <h1>Archana B S</h1>
-            <p>Engineer | Developer | Innovator</p>
-        </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Engineer | Developer | Innovator</p>
+        <a href="#about">Learn More About Me</a>
+    </section>
 
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>Hello! I’m Archana B S, a passionate software developer and engineer. My focus is on building solutions that make a real impact on society and solve pressing issues. Explore my portfolio to see what I've been working on!</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <h2>Experience</h2>
+        <div class="grid-container">
             <div class="card">
-                <p>Hello! I’m Archana, a passionate software developer and engineer. Welcome to my portfolio where I
-                    showcase my projects and professional experiences. My goal is to build solutions that impact lives
-                    and solve real-world problems.</p>
+                <h3>Engineer Intern</h3>
+                <p><strong>SupplySafe (RNAlter)</strong> | Sep 2024 - Present</p>
+                <p>Working on building vulnerabilities for Linux kernel modules.</p>
             </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience">
-            <h2>Experience</h2>
-
-            <div class="card-experience">
-                <!-- Experience 1 -->
-                <div class="card">
-                    <h3>Engineer Intern</h3>
-                    <p><strong>SupplySafe (RNAlter)</strong> | Sep 2024 - Present</p>
-                    <p>Working on building vulnerabilities in Linux kernel modules.</p>
-                </div>
-
-                <!-- Experience 2 -->
-                <div class="card">
-                    <h3>Software Developer Intern</h3>
-                    <p><strong>TechCiti</strong> | Oct 2023 - Nov 2023</p>
-                    <ul>
-                        <li>Developed a <strong>Heart Disease Prediction</strong> system with 97.9% accuracy.</li>
-                        <li>Collaborated with teams to optimize machine learning algorithms.</li>
-                        <li>Tested, debugged, and improved system efficiency using Python.</li>
-                    </ul>
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="card">
-                    <h3>Engineer Intern</h3>
-                    <p><strong>ComedKares</strong> | Oct 2022 - Nov 2022</p>
-                    <p>Developed a prototype for automatic sensing taps using sensor technology.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-
-            <div class="card-education">
-                <!-- Education 1 -->
-                <div class="card">
-                    <h3>Bachelor of Engineering</h3>
-                    <p><strong>T John Institute of Technology</strong> | 2021 - Present</p>
-                    <p>CGPA: 8.5</p>
-                </div>
-
-                <!-- Education 2 -->
-                <div class="card">
-                    <h3>Pre-University</h3>
-                    <p><strong>Christ Academy</strong> | 2019 - 2021</p>
-                    <p>Percentage: 89.5%</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
             <div class="card">
-                <h3>Heart Disease Prediction System</h3>
-                <p>Developed a system to predict heart disease using machine learning techniques. Achieved an accuracy rate of 97.9%.</p>
+                <h3>Software Developer Intern</h3>
+                <p><strong>TechCiti</strong> | Oct 2023 - Nov 2023</p>
+                <p>Developed a Heart Disease Prediction project with 97.9% accuracy, collaborated on Python algorithms, and enhanced UI design.</p>
             </div>
-        </section>
-    </div>
+            <div class="card">
+                <h3>Engineer Intern</h3>
+                <p><strong>ComedKares</strong> | Oct 2022 - Nov 2022</p>
+                <p>Involved in building a prototype for automatic sensing taps using sensor technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <h2>Education</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Bachelor of Engineering</h3>
+                <p><strong>T John Institute of Technology</strong> | 2021 - Present</p>
+                <p>CGPA: 8.5</p>
+            </div>
+            <div class="card">
+                <h3>Pre-University</h3>
+                <p><strong>Christ Academy</strong> | 2019 - 2021</p>
+                <p>Percentage: 89.5%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <h2>Projects</h2>
+        <div class="card">
+            <h3>Heart Disease Prediction System</h3>
+            <p>Developed a heart disease prediction system using machine learning algorithms, achieving 97.9% accuracy. The project aids healthcare professionals in making informed decisions.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Archana B S - All Rights Reserved</p>
+    </footer>
 
 </body>
 
 </html>
+
 
 
 
